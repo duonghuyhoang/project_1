@@ -50,23 +50,43 @@ body {
 #input-start-day {
     color: #4CA4CA;
     margin-left: 20px;
-    margin-top: 3px;
-    font-size: 15px;
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: 550;
+   
 }
 #input-end-day {
     color: #4CA4CA;
     margin-left: 20px;
     margin-top: 3px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 550;
 }
-.lable{
+#checkbox-start-day {
+    width: 11px;
+    height: 11px;
+}
+#checkbox-end-day {
+    width: 11px;
+    height: 11px;
+}
+.lable1{
     color: #4CA4CA;
-    margin-left: 10px;
+    margin-top: 26px;
+    margin-left: 8px;
     font-size: 13px;
     font-family: Andale Mono, monospace;
     font-weight: 600;
+    position: absolute;
+}
+.lable2 {
+    color: #4CA4CA;
+    margin-top: 9px;
+    margin-left: 8px;
+    font-size: 13px;
+    font-family: Andale Mono, monospace;
+    font-weight: 600;
+    position: absolute;
 }
 .confirm-date {
     width: 220px;
