@@ -1,0 +1,89 @@
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+body {
+    height: 720px;
+    width: 1280px;
+    background-color: #a7bcc1;
+}
+.wrapper {
+    width: 300px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 500px;
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    padding-top: 30px;
+    font-size: 27px;
+    text-align: center;
+    color: rgb(234, 180, 89);
+    font-family: "Sofia", sans-serif;
+    font-style: oblique;
+    
+   
+}
+.pick-date1 {
+    
+    color: #4CA4CA;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: Andale Mono, monospace;
+    font-weight: 550;
+}
+.pick-date2 {
+    color: #4CA4CA;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: Andale Mono, monospace;
+    font-weight: 550;
+}
+#input-start-day {
+    color: #4CA4CA;
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: 550;
+}
+#input-end-day {
+    color: #4CA4CA;
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: 550;
+}
+.lable{
+    color: #4CA4CA;
+    margin-left: 10px;
+    font-size: 13px;
+    font-family: Andale Mono, monospace;
+    font-weight: 600;
+}
+.confirm-date {
+    width: 220px;
+    height: 25px;
+    background-color: rgb(234, 180, 89);
+    color: #4e629c;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 5px;
+    
+}
+.render-date {
+    font-size: 50px;
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(234, 180, 89);
+    font-family: "Sofia", sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+}
