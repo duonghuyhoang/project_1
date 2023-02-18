@@ -50,10 +50,13 @@ body {
 #input-start-day {
     color: #4CA4CA;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 3px;
     font-size: 18px;
     font-weight: 550;
-   
+    border-color:  #4CA4CA;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border:1.5px solid;
 }
 #input-end-day {
     color: #4CA4CA;
@@ -61,6 +64,10 @@ body {
     margin-top: 3px;
     font-size: 18px;
     font-weight: 550;
+    border-color:  #4CA4CA;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border:1.5px solid;
 }
 #checkbox-start-day {
     width: 11px;
@@ -72,7 +79,7 @@ body {
 }
 .lable1{
     color: #4CA4CA;
-    margin-top: 26px;
+    margin-top: 9px;
     margin-left: 8px;
     font-size: 13px;
     font-family: Andale Mono, monospace;

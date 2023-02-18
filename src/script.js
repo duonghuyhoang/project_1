@@ -2,20 +2,22 @@ var today = new Date();
 
 function checkStartDay(today) {
     var checkBox1 = document.getElementById("checkbox-start-day");
-    var setDate = document.getElementById('input-start-day');
+    var setDate1 = document.getElementById('input-start-day');
        
         if(checkBox1.checked == true){
-            setDate.valueAsDate = today;
+            setDate1.valueAsDate = today;
+            setDate1.disabled = true;
         }
 
     }
     
 function checkEndDay(today) {
     var checkBox2 = document.getElementById("checkbox-end-day");
-    var setDate = document.getElementById('input-end-day');
+    var setDate2 = document.getElementById('input-end-day');
        
         if(checkBox2.checked == true){
-            setDate.valueAsDate = today;
+            setDate2.valueAsDate = today;
+            setDate2.disabled = true;
         }
 
     }
