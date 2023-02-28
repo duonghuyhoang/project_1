@@ -2,7 +2,6 @@ const today = new Date().toISOString().slice(0, 10);
 let setDate1 = $('#input-start-day');
 let setDate2 = $('#input-end-day');
 
-
 $(document).ready(function () {
     
     $('#checkbox-start-day').change(function (e) { 
