@@ -1,6 +1,6 @@
-var today = new Date().toISOString().slice(0, 10);
-var setDate1 = $('#input-start-day');
-var setDate2 = $('#input-end-day');
+const today = new Date().toISOString().slice(0, 10);
+let setDate1 = $('#input-start-day');
+let setDate2 = $('#input-end-day');
 
 
 $(document).ready(function () {
@@ -25,14 +25,14 @@ $(document).ready(function () {
     });
     $('.confirm-date').click(function (e) { 
         e.preventDefault();
-        var date1 = $('#input-start-day').val();;
-        var date2 = $('#input-end-day').val();;
-        var oneDay = 24*60*60*1000;
-        var getdate1 = new Date(date1).getTime() ;
-        var getdate2 = new Date(date2).getTime() ;
-        var renderDate1 = Math.round(getdate1 / oneDay);
-        var renderDate2 = Math.round(getdate2 / oneDay);
-        var confirmdate =  renderDate2 - renderDate1;
+        let date1 = $('#input-start-day').val();;
+        let date2 = $('#input-end-day').val();;
+        let oneDay = 24*60*60*1000;
+        let getdate1 = new Date(date1).getTime() ;
+        let getdate2 = new Date(date2).getTime() ;
+        let renderDate1 = Math.round(getdate1 / oneDay);
+        let renderDate2 = Math.round(getdate2 / oneDay);
+        let confirmdate =  renderDate2 - renderDate1;
         $('.render-date').text(confirmdate + " ngày!");
         
     });
