@@ -2,7 +2,6 @@ const today = new Date().toISOString().slice(0, 10);
 let setDate1 = $('#input-start-day');
 let setDate2 = $('#input-end-day');
 
-
 $(document).ready(function () {
     
     $('#checkbox-start-day').change(function (e) { 
@@ -33,7 +32,41 @@ $(document).ready(function () {
         let renderDate1 = Math.round(getdate1 / oneDay);
         let renderDate2 = Math.round(getdate2 / oneDay);
         let confirmdate =  renderDate2 - renderDate1;
-        $('.render-date').text(confirmdate + " ngày!");
+        if($('#checkbox-start-day').is(':checked') == true && $('#checkbox-end-day').is(':checked') == false){
+                            if(date1  == [] || date2 == [] ) {
+                                    $('.render-date').text(`Vui lòng nhập ngày!`).css('font-size', '28px');
+
+                            }else {
+                                    $('.render-date').text(confirmdate + " ngày!"); 
+                            }
+        }else if($('#checkbox-start-day').is(':checked') == false && $('#checkbox-end-day').is(':checked') == true){
+                            if(date1  == [] || date2 == [] ) {
+                                     $('.render-date').text(`Vui lòng nhập ngày!`).css('font-size', '28px');
+
+                            }else {
+                                    $('.render-date').text(confirmdate + " ngày!"); 
+                            }
+        }else if($('#checkbox-start-day').is(':checked') == true && $('#checkbox-end-day').is(':checked') == true){
+                            if(date1  == [] || date2 == [] ) {
+                                     $('.render-date').text(`Vui lòng nhập ngày!`).css('font-size', '28px');
+
+                              }else {
+                                    $('.render-date').text(confirmdate + " ngày!"); 
+                             }
+        }else if($('#checkbox-start-day').is(':checked') == false && $('#checkbox-end-day').is(':checked') == false){
+                            if(date1  == [] || date2 == [] ) {
+                                    $('.render-date').text(`Vui lòng nhập ngày!`).css('font-size', '28px');
+
+                            }else {
+                                     $('.render-date').text(confirmdate + " ngày!"); 
+                            }
+                        
+         }
+         
+     
         
     });
 });
+
+
+
