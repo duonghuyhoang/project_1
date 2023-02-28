@@ -1,40 +1,39 @@
-var today = new Date();
+var today = new Date().toISOString().slice(0, 10);
+var setDate1 = $('#input-start-day');
+var setDate2 = $('#input-end-day');
 
-function checkStartDay(today) {
-    var checkBox1 = document.getElementById("checkbox-start-day");
-    var setDate1 = document.getElementById('input-start-day');
-       
-        if(checkBox1.checked == true){
-            setDate1.valueAsDate = today;
-            setDate1.disabled = true;
-        }
 
-    }
+$(document).ready(function () {
     
-function checkEndDay(today) {
-    var checkBox2 = document.getElementById("checkbox-end-day");
-    var setDate2 = document.getElementById('input-end-day');
-       
-        if(checkBox2.checked == true){
-            setDate2.valueAsDate = today;
-            setDate2.disabled = true;
+    $('#checkbox-start-day').change(function (e) { 
+        e.preventDefault();
+        if ($(this).is(':checked') == true) {
+            $('#input-start-day' ).prop("disabled", true);
+                setDate1.val(today);
         }
-
-    }
-
-function dateCalculation(){
-   var date1 = document.getElementById('input-start-day').value;
-   var date2 = document.getElementById('input-end-day').value;
-   var oneDay = 24*60*60*1000
-   var getdate1 = new Date(date1).getTime() 
-   var getdate2 = new Date(date2).getTime() 
-   let renderDate1 = Math.round(getdate1 / oneDay);
-   let renderDate2 = Math.round(getdate2 / oneDay);
-   const confirmdate =  renderDate2 - renderDate1;
-   document.querySelector(".render-date").innerHTML = confirmdate + " ngày!";
-   
-}
-
-
-
-
+        else {
+            $('#input-start-day' ).prop("disabled", false)}
+    });
+    $('#checkbox-end-day').change(function (e) { 
+        e.preventDefault();
+        if ($(this).is(':checked') == true) {
+            $( '#input-end-day').prop("disabled", true);
+              setDate2.val(today);
+        }
+        else {
+            $('#input-end-day' ).prop("disabled", false)}
+    });
+    $('.confirm-date').click(function (e) { 
+        e.preventDefault();
+        var date1 = $('#input-start-day').val();;
+        var date2 = $('#input-end-day').val();;
+        var oneDay = 24*60*60*1000;
+        var getdate1 = new Date(date1).getTime() ;
+        var getdate2 = new Date(date2).getTime() ;
+        var renderDate1 = Math.round(getdate1 / oneDay);
+        var renderDate2 = Math.round(getdate2 / oneDay);
+        var confirmdate =  renderDate2 - renderDate1;
+        $('.render-date').text(confirmdate + " ngày!");
+        
+    });
+});

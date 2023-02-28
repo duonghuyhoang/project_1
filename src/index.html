@@ -13,21 +13,23 @@
              <div class="start-day">
                 <h1 class="title">Date Counter</h1>
                     <h3 class="pick-date1">Chọn ngày bắt đầu: </h3>
-                        <input type="date" id="input-start-day" name="">
-                        <input type="checkbox" name="" id="checkbox-start-day"  onclick="checkStartDay(today)">
+                        <input type="date" id="input-start-day" name=""  value="{{ date('y-m-d', strtotime($book->exit_time)) }}">
+                        <input type="checkbox" name="" id="checkbox-start-day"  >
                         <label class="lable1"  for="">Hôm nay</label>
              </div>
              <div class="end-day">
                     <h3 class="pick-date2">Chọn ngày kết thúc: </h3>
                         <input type="date" id="input-end-day" name="">
-                        <input type="checkbox" name="" id="checkbox-end-day"  onclick="checkEndDay(today)">
+                        <input type="checkbox" name="" id="checkbox-end-day" >
                         <label class="lable2" for="">Hôm nay</label>
              </div>
              <div class="confirm">
-                    <button class="confirm-date" type="button" onclick="dateCalculation()">Xác nhận!</button>
+                    <button class="confirm-date" type="button">Xác nhận!</button>
              </div>
             <div class="render-date"></div>
         </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="./script.js"></script>
+
 </html>
